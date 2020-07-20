@@ -1,0 +1,8 @@
+<div class="parent">
+  <h1>Parent Component</h1>
+  <div class="increment-buttons">
+    <button type="button" class="btn btn-primary increment-button" (click)="increment()">+</button>
+    <button type="button" class="btn btn-danger decrement-button" (click)="decrement()">-</button>
+  </div>
+  <app-child (resetCount)="handleReset()" [count]="count"></app-child>
+</div>

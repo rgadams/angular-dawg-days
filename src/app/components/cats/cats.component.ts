@@ -7,7 +7,7 @@ import {CatHttpService} from '../../services/cat-http.service';
   styleUrls: ['./cats.component.less']
 })
 export class CatsComponent implements OnInit {
-  catUrl: ImageBitmap;
+  catUrl: string;
 
   constructor(private catHttpService: CatHttpService) { }
 

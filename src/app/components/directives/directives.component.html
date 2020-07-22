@@ -1,0 +1,25 @@
+<div class="show-list-buttons" xmlns="http://www.w3.org/1999/html">
+  <label>
+    True
+    <input type="radio" value="yes" name="show-list-buttons" [(ngModel)]="radioButtonValue" (ngModelChange)="updateShowListValue()">
+  </label>
+  <label>
+    False
+    <input type="radio" value="no" name="show-list-buttons" [(ngModel)]="radioButtonValue" (ngModelChange)="updateShowListValue()">
+  </label>
+</div>
+
+<div *ngIf="shouldShowList">
+  <table>
+    <thead>
+      <tr>
+        <td>Value</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of itemList">
+        <td>{{item.value}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

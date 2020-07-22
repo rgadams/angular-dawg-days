@@ -5,14 +5,11 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.less']
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent {
   @Output() resetCount = new EventEmitter();
   @Input() count;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   reset() {
     this.resetCount.emit();
